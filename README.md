@@ -2,16 +2,16 @@
 Notally Extended is a lightweight notes app based on [Notally](https://github.com/OmGodse/Notally), aiming to make it more modern and add more features.
 
 ### Features
-* Widgets
-* Reminders
 * Auto-Backup
-* Note Search
-* Text Size Adjustment
-* Note Organization (Color, Pin & Label)
+* Clickable Links
 * Image Attachments
 * Note Export
+* Note Organization
+* Note Search
+* Reminders
 * Rich Text Formatting
-* Clickable Links
+* Text Size Adjustment
+* Widgets
 * More features coming soon
 
 ### Translations
