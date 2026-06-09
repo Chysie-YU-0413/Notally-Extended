@@ -19,10 +19,4 @@ Notally was created because I wanted to make something that was beautiful and at
 Issues are currently disabled. Please use the pull requests tab only for translations or bug fixes, This project is currently not accepting feature requests.
 
 ### Translations
-All translations are crowd sourced. To contribute, follow these [guidelines](https://m2.material.io/design/communication/writing.html) and email me or open a pull request.[Get it on IzzyOnDroid](https://apt.izzysoft.de/packages/com.omgodse.notally)
-
-### Contributing
-Issues are currently disabled. Please use the pull requests tab only for translations or bug fixes, This project is currently not accepting feature requests.
-
-### Translations
 All translations are crowd sourced. To contribute, follow these [guidelines](https://m2.material.io/design/communication/writing.html) and email me or open a pull request.
