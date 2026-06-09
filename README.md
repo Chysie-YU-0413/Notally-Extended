@@ -20,4 +20,4 @@ This is not because of any stance or discrimination, but because I cannot verify
 
 Therefore, this project does not accept translation pull requests or issues submitted in any language other than English or Simplified Chinese.
 
-If you need multilingual support, please use [Notally](https://github.com/OmGodse/Notally) or [NotallyX](https://github.com/Crustack/NotallyX).
+If you need multilingual support, you can try [Notally](https://github.com/OmGodse/Notally) or [NotallyX](https://github.com/Crustack/NotallyX).
