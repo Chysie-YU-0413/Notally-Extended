@@ -1,5 +1,5 @@
 ### Background
-Notally Extended is a lightweight note-taking app based on [**Notally**](https://github.com/OmGodse/Notally), aiming to make the software more modern and add more features on top of the original version.
+Notally Extended is a lightweight nots app based on [**Notally**](https://github.com/OmGodse/Notally), aiming to make the software more modern and add more features on top of the original version.
 
 ### Features
 * Widgets
