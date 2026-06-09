@@ -10,8 +10,8 @@ Notally Extended is a lightweight notes app based on [Notally](https://github.co
 * Color, pin, and label notes
 * Add pictures to notes
 * Export notes as TXT, JSON, HTML, PDF
-* Create rich text notes: bold, italics, monospace, strikethrough
-* Add clickable links: phone, email, URL
+* Create rich text notes
+* Add clickable links
 * More features coming soon
 
 ### Translations
