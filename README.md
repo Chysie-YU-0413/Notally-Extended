@@ -14,10 +14,10 @@ Notally Extended is a lightweight notes app based on [Notally](https://github.co
 * Add clickable links to notes with support for phone numbers, email addresses and web urls
 
 ### Translations
-Only English and Simplified Chinese remain; all other languages have been removed.
+This project only supports English and Simplified Chinese; all other languages have been removed.
 
 This is not due to any stance or discrimination, but because I cannot verify the translation quality of other languages.
 
-Therefore, translation pull requests for other languages will not be accepted.
+Therefore, this project does not accept any translation pull requests for languages other than English and Simplified Chinese.
 
-If you need multilingual support, please use Notally or NotallyX.
+If you need multilingual support, you may use Notally or NotallyX.
