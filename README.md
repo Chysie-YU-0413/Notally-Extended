@@ -13,8 +13,5 @@ Notally Extended is a lightweight notes app based on [Notally](https://github.co
 * Create rich text notes with support for bold, italics, mono space and strike-through
 * Add clickable links to notes with support for phone numbers, email addresses and web urls
 
-### Contributing
-Issues are currently disabled. Please use the pull requests tab only for translations or bug fixes, This project is currently not accepting feature requests.
-
 ### Translations
 All translations are crowd sourced. To contribute, follow these [guidelines](https://m2.material.io/design/communication/writing.html) and email me or open a pull request.
