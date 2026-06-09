@@ -18,6 +18,6 @@ All languages other than English and Simplified Chinese have been removed.
 
 This is not due to any stance or discrimination, but because I cannot verify the translation quality of other languages.
 
-Additionally, this project does not accept any translation pull requests for languages other than English and Simplified Chinese.
+Therefore, this project does not accept any translation pull requests for languages other than English and Simplified Chinese.
 
 If you need multilingual support, you may use Notally or NotallyX.
