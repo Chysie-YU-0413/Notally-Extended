@@ -21,12 +21,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.omgodse.notally.view.AspectRatioImageView
+            <com.notally.extended.view.AspectRatioImageView
                 android:id="@+id/ImageView"
                 android:layout_width="match_parent"
                 android:layout_height="0dp" />
 
-            <com.omgodse.notally.view.AspectRatioTextView
+            <com.notally.extended.view.AspectRatioTextView
                 android:id="@+id/Message"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -137,7 +137,7 @@
 
         </LinearLayout>
 
-        <com.omgodse.notally.view.PublicFlowLayout
+        <com.notally.extended.view.PublicFlowLayout
             android:id="@+id/LabelGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -58,7 +58,7 @@
             android:orientation="vertical"
             android:paddingBottom="16dp">
 
-            <com.omgodse.notally.view.AspectRatioRecyclerView
+            <com.notally.extended.view.AspectRatioRecyclerView
                 android:id="@+id/ImagePreview"
                 android:layout_width="match_parent"
                 android:layout_height="0dp" />
@@ -106,7 +106,7 @@
                 android:layout_height="1dp"
                 android:background="?android:attr/listDivider" />
 
-            <com.omgodse.notally.view.OverflowEditText
+            <com.notally.extended.view.OverflowEditText
                 android:id="@+id/EnterBody"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -162,7 +162,7 @@
                 android:overScrollMode="never"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-            <com.omgodse.notally.view.PublicFlowLayout
+            <com.notally.extended.view.PublicFlowLayout
                 android:id="@+id/LabelGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
