@@ -15,14 +15,12 @@ Notally was created because I wanted to make something that was beautiful and at
 * Create rich text notes with support for bold, italics, mono space and strike-through
 * Add clickable links to notes with support for phone numbers, email addresses and web urls
 
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play"  height="70"/>](https://play.google.com/store/apps/details?id=com.omgodse.notally)
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="70"/>](https://f-droid.org/packages/com.omgodse.notally/)
-[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height="70"/>](https://apt.izzysoft.de/packages/com.omgodse.notally)
+[Get it on Google Play](https://play.google.com/store/apps/details?id=com.omgodse.notally)
+[Get it on F-Droid](https://f-droid.org/packages/com.omgodse.notally/)
+[Get it on IzzyOnDroid](https://apt.izzysoft.de/packages/com.omgodse.notally)
 
 ### Contributing
 Issues are currently disabled. Please use the pull requests tab only for translations or bug fixes, This project is currently not accepting feature requests.
 
 ### Translations
 All translations are crowd sourced. To contribute, follow these [guidelines](https://m2.material.io/design/communication/writing.html) and email me or open a pull request.
-
-<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="250"/><img src="fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="250"/><img src="fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="250"/>
