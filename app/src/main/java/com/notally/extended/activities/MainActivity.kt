@@ -1,4 +1,4 @@
-﻿package com.notally.extended.activities
+package com.notally.extended.activities
 
 import android.app.Activity
 import android.content.Intent
@@ -360,6 +360,8 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         configuration = AppBarConfiguration(binding.NavigationView.menu, binding.DrawerLayout)
         setupActionBarWithNavController(navController, configuration)
+
+        binding.NavigationView.addHeaderView(layoutInflater.inflate(R.layout.nav_header, binding.NavigationView, false))
 
         var fragmentIdToLoad: Int? = null
         binding.NavigationView.setNavigationItemSelectedListener { item ->
