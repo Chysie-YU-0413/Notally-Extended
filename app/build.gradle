@@ -13,8 +13,8 @@ android {
         applicationId 'com.notally.extended'
         minSdk 21
         targetSdk 35
-        versionCode 57
-        versionName "6.2"
+        versionCode 58
+        versionName "6.2.1"
         resourceConfigurations += ['en', 'zh-rCN']
         vectorDrawables.generatedDensities = []
     }

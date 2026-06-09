@@ -1,4 +1,4 @@
-﻿package com.notally.extended.fragments
+package com.notally.extended.fragments
 
 import android.app.Activity
 import android.app.Application
@@ -73,15 +73,11 @@ class Settings : Fragment() {
         setupProgressDialog(R.string.importing_backup, model.importingBackup)
 
         binding.GitHub.setOnClickListener {
-            openLink("https://github.com/OmGodse/Notally")
+            openLink("https://github.com/Chysie-YU-0413/Notally-Extended")
         }
 
         binding.Libraries.setOnClickListener {
             displayLibraries()
-        }
-
-        binding.Rate.setOnClickListener {
-            openLink("https://play.google.com/store/apps/details?id=com.omgodse.notally")
         }
 
         binding.SendFeedback.setOnClickListener {
@@ -155,8 +151,8 @@ class Settings : Fragment() {
         val intent = Intent(Intent.ACTION_SEND)
         intent.selector = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"))
 
-        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("omgodseapps@gmail.com"))
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Notally [Feedback]")
+        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("bot2010413@outlook.com"))
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Notally Extended [Feedback]")
 
         val app = requireContext().applicationContext as Application
         val log = Operations.getLog(app)

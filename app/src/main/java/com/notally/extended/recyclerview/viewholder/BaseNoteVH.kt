@@ -1,4 +1,4 @@
-﻿package com.notally.extended.recyclerview.viewholder
+package com.notally.extended.recyclerview.viewholder
 
 import android.graphics.drawable.Drawable
 import android.util.TypedValue
@@ -32,6 +32,7 @@ import com.notally.extended.room.SpanRepresentation
 import com.notally.extended.room.Type
 import org.ocpsoft.prettytime.PrettyTime
 import java.io.File
+import java.util.Locale
 import java.util.Date
 
 class BaseNoteVH(
@@ -142,7 +143,12 @@ class BaseNoteVH(
             binding.Date.visibility = View.VISIBLE
             val date = Date(timestamp)
             when (dateFormat) {
-                DateFormat.relative -> binding.Date.text = prettyTime.format(date)
+                DateFormat.relative -> {
+                    val formatted = prettyTime.format(date)
+                    binding.Date.text = if (Locale.getDefault().language == "zh") {
+                        formatted.replace(" ", "")
+                    } else formatted
+                }
                 DateFormat.absolute -> binding.Date.text = fullFormat.format(date)
             }
         } else binding.Date.visibility = View.GONE

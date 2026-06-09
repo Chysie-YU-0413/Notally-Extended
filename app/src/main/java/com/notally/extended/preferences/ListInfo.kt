@@ -1,10 +1,11 @@
-﻿package com.notally.extended.preferences
+package com.notally.extended.preferences
 
 import android.content.Context
 import com.notally.extended.R
 import org.ocpsoft.prettytime.PrettyTime
 import java.text.DateFormat
 import java.util.Date
+import java.util.Locale
 
 sealed interface ListInfo {
 
@@ -64,8 +65,9 @@ object DateFormat : ListInfo {
         val none = context.getString(R.string.none)
         val date = Date(System.currentTimeMillis() - 86400000)
         val relative = PrettyTime().format(date)
+        val cleanRelative = if (Locale.getDefault().language == "zh") relative.replace(" ", "") else relative
         val absolute = DateFormat.getDateInstance(DateFormat.FULL).format(date)
-        return arrayOf(none, relative, absolute)
+        return arrayOf(none, cleanRelative, absolute)
     }
 }
 
