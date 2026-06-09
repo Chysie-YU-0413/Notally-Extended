@@ -4,14 +4,14 @@ Notally Extended is a lightweight notes app based on [Notally](https://github.co
 ### Features
 * Widgets
 * Reminders
-* Auto backup
-* Note search
-* Text size adjustment
-* Color, pin & label notes
-* Image attachment
-* Note export
-* Rich text notes
-* Clickable links
+* Auto-Backup
+* Note Search
+* Text Size Adjustment
+* Note Organization (Color, Pin & Label)
+* Image Attachments
+* Note Export
+* Rich Text Formatting
+* Clickable Links
 * More features coming soon
 
 ### Translations
