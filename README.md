@@ -26,12 +26,3 @@ Issues are currently disabled. Please use the pull requests tab only for transla
 All translations are crowd sourced. To contribute, follow these [guidelines](https://m2.material.io/design/communication/writing.html) and email me or open a pull request.
 
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="250"/><img src="fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="250"/><img src="fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="250"/>
-
-### Hall of fame
-* [Top 20 Android Apps 2021!](https://www.youtube.com/watch?v=bwz13aM0qJk)
-* [De-Googling Any Android Phone! (Google Apps Alternatives)](https://www.youtube.com/watch?v=RQUEgwgV99I)
-* [The BEST Private Notetaking Apps Explained](https://www.youtube.com/watch?v=BJw5tKPP1PY)
-* [Notally](https://www.noteapps.ca/notally/)
-* [The 9 Best Simple Note-Taking Apps for Android](https://www.makeuseof.com/simple-note-apps-android/)
-* [This tiny notes app made me write more because it opens instantly](https://www.makeuseof.com/notally-app-made-me-write-more/)
-* [I tried a minimalist notes app with zero buttons and I’m obsessed](https://www.makeuseof.com/minimalist-notes-app-with-zero-buttons/)
