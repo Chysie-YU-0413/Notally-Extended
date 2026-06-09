@@ -7,7 +7,6 @@ Notally Extended is a lightweight notes app based on [Notally](https://github.co
 * Auto backup
 * Search within notes
 * Adjustable text size
-* Support for Lollipop devices and up
 * Color, pin and label your notes for quick organisation
 * Complement your notes with pictures (JPG, PNG, WEBP)
 * Export notes as TXT, JSON, HTML or PDF files with formatting
