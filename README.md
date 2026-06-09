@@ -1,5 +1,6 @@
 ### Background
-Notally was created because I wanted to make something that was beautiful and at the same time, useful. It's extremely light, there are minimal dependencies and lines of code.
+Notally Extended is a lightweight note-taking app based on Notally, aiming to make the software more modern and add more features on top of the original version.
+Thanks to the original author @OmGodse.
 
 ### Features
 * Widgets
@@ -8,7 +9,6 @@ Notally was created because I wanted to make something that was beautiful and at
 * Search within notes
 * Adjustable text size
 * Support for Lollipop devices and up
-* APK size of 1.4 MB (1.8 MB uncompressed)
 * Color, pin and label your notes for quick organisation
 * Complement your notes with pictures (JPG, PNG, WEBP)
 * Export notes as TXT, JSON, HTML or PDF files with formatting
