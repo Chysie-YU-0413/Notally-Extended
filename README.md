@@ -16,7 +16,7 @@ Notally Extended is a lightweight notes app based on [Notally](https://github.co
 ### Translations
 This project only supports English and Simplified Chinese; all other languages have been removed.
 
-This is not due to any stance or discrimination, but because I cannot verify the translation quality of other languages.
+This is not because of any stance or discrimination, but because I cannot verify the translation quality of other languages.
 
 Therefore, this project does not accept any translation pull requests for languages other than English and Simplified Chinese.
 
