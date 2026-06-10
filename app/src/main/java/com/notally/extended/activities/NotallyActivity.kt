@@ -1,4 +1,4 @@
-﻿package com.notally.extended.activities
+package com.notally.extended.activities
 
 import android.Manifest
 import android.app.Activity
@@ -75,11 +75,42 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
 
 
     override fun finish() {
+        if (model.isNewNote && !skipEmptyCheck && isEmpty()) {
+            showEmptyNoteDialog()
+            return
+        }
         lifecycleScope.launch {
             model.saveNote()
             WidgetProvider.sendBroadcast(application, model.id)
             super.finish()
         }
+    }
+
+    private var skipEmptyCheck = false
+
+    private fun isEmpty(): Boolean {
+        return when (model.type) {
+            Type.NOTE -> model.title.isBlank() && model.body.isBlank() && model.images.value.isNullOrEmpty()
+            Type.LIST -> model.title.isBlank() && model.images.value.isNullOrEmpty() && model.items.all { it.body.isBlank() }
+        }
+    }
+
+    private fun showEmptyNoteDialog() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.empty_note)
+            .setMessage(R.string.save_empty_note)
+            .setPositiveButton(R.string.save) { _, _ ->
+                skipEmptyCheck = true
+                finish()
+            }
+            .setNegativeButton(R.string.dont_save) { _, _ ->
+                lifecycleScope.launch {
+                    model.deleteBaseNote()
+                    skipEmptyCheck = true
+                    super.finish()
+                }
+            }
+            .show()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

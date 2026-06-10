@@ -124,10 +124,14 @@ class MainActivity : AppCompatActivity() {
             if (enabled) {
                 binding.Toolbar.visibility = View.GONE
                 binding.ActionMode.visibility = View.VISIBLE
+                binding.TakeNote.hide()
+                binding.MakeList.hide()
                 binding.DrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
             } else {
                 binding.Toolbar.visibility = View.VISIBLE
                 binding.ActionMode.visibility = View.GONE
+                binding.TakeNote.show()
+                binding.MakeList.show()
                 binding.DrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNDEFINED)
             }
         }

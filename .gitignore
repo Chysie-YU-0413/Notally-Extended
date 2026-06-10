@@ -11,5 +11,8 @@
 /build
 /app/release
 /captures
+/my-release-key
+/Signature
+/metadata
 .externalNativeBuild
 .cxx

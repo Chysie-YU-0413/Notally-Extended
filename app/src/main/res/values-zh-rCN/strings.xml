@@ -168,6 +168,8 @@
     <string name="recording">录音中…</string>
     <string name="ready_to_record">准备录音</string>
     <string name="discard">放弃</string>
+    <string name="dont_save">不保存</string>
+    <string name="save_empty_note">保存此空白笔记？</string>
     <string name="save_recording">保存录音？</string>
     <string name="delete_audio_recording_forever">彻底删除录音？</string>
     <string name="tap_for_more_options">点击获取更多选项</string>
