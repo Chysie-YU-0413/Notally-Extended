@@ -42,7 +42,9 @@ import com.notally.extended.room.Color
 import com.notally.extended.room.Folder
 import com.notally.extended.room.Type
 import com.notally.extended.viewmodels.BaseNoteModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import android.provider.OpenableColumns
 import java.io.File
 
 class MainActivity : AppCompatActivity() {
@@ -82,11 +84,24 @@ class MainActivity : AppCompatActivity() {
             data?.data?.let { uri ->
                 model.writeCurrentFileToUri(uri)
             }
+        } else if (requestCode == REQUEST_IMPORT_TXT && resultCode == Activity.RESULT_OK) {
+            data?.data?.let { uri ->
+                lifecycleScope.launch(Dispatchers.IO) {
+                    val content = readTextFile(uri)
+                    val title = getFileName(uri)
+                    model.insertNote(title, content.trim())
+                }
+            }
         }
     }
 
 
     private fun setupFAB() {
+        binding.ImportTxt.setOnClickListener {
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+            intent.type = "text/plain"
+            startActivityForResult(intent, REQUEST_IMPORT_TXT)
+        }
         binding.TakeNote.setOnClickListener {
             val intent = Intent(this, TakeNote::class.java)
             startActivity(intent)
@@ -115,6 +130,7 @@ class MainActivity : AppCompatActivity() {
 
         transition.excludeTarget(binding.NavHostFragment, true)
         transition.excludeChildren(binding.NavHostFragment, true)
+        transition.excludeTarget(binding.ImportTxt, true)
         transition.excludeTarget(binding.TakeNote, true)
         transition.excludeTarget(binding.MakeList, true)
         transition.excludeTarget(binding.NavigationView, true)
@@ -124,12 +140,14 @@ class MainActivity : AppCompatActivity() {
             if (enabled) {
                 binding.Toolbar.visibility = View.GONE
                 binding.ActionMode.visibility = View.VISIBLE
+                binding.ImportTxt.hide()
                 binding.TakeNote.hide()
                 binding.MakeList.hide()
                 binding.DrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
             } else {
                 binding.Toolbar.visibility = View.VISIBLE
                 binding.ActionMode.visibility = View.GONE
+                binding.ImportTxt.show()
                 binding.TakeNote.show()
                 binding.MakeList.show()
                 binding.DrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNDEFINED)
@@ -390,13 +408,30 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun readTextFile(uri: Uri): String {
+        return contentResolver.openInputStream(uri)?.bufferedReader()?.readText() ?: ""
+    }
+
+    private fun getFileName(uri: Uri): String {
+        var name = ""
+        contentResolver.query(uri, null, null, null, null)?.use { cursor ->
+            val nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+            if (cursor.moveToFirst() && nameIndex >= 0) {
+                name = cursor.getString(nameIndex)?.removeSuffix(".txt") ?: ""
+            }
+        }
+        return name
+    }
+
     private fun handleDestinationChange(destination: NavDestination) {
         if (destination.id == R.id.Notes) {
             binding.TakeNote.show()
             binding.MakeList.show()
+            binding.ImportTxt.show()
         } else {
             binding.TakeNote.hide()
             binding.MakeList.hide()
+            binding.ImportTxt.hide()
         }
 
         val inputManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
@@ -434,5 +469,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val REQUEST_EXPORT_FILE = 10
+        private const val REQUEST_IMPORT_TXT = 11
     }
 }

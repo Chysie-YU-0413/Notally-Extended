@@ -1,4 +1,4 @@
-﻿package com.notally.extended.viewmodels
+package com.notally.extended.viewmodels
 
 import android.app.AlarmManager
 import android.app.Application
@@ -656,6 +656,27 @@ class BaseNoteModel(private val app: Application) : AndroidViewModel(app) {
     private fun executeAsync(function: suspend () -> Unit) {
         viewModelScope.launch(Dispatchers.IO) { function() }
     }
+
+    suspend fun insertNote(title: String, body: String) = withContext(Dispatchers.IO) {
+        val note = BaseNote(
+            id = 0L,
+            type = Type.NOTE,
+            folder = Folder.NOTES,
+            color = Color.DEFAULT,
+            title = title,
+            pinned = false,
+            timestamp = System.currentTimeMillis(),
+            labels = emptyList(),
+            body = body,
+            spans = emptyList(),
+            items = emptyList(),
+            images = emptyList(),
+            audios = emptyList(),
+            reminder = null
+        )
+        baseNoteDao.insert(note)
+    }
+
 
     companion object {
 

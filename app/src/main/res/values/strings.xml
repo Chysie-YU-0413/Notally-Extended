@@ -171,6 +171,7 @@
     <string name="discard">Discard</string>
     <string name="dont_save">Don\'t save</string>
     <string name="save_empty_note">Save this empty note?</string>
+    <string name="import_txt">Import text</string>
     <string name="save_recording">Save recording?</string>
     <string name="delete_audio_recording_forever">Delete audio recording forever?</string>
     <string name="tap_for_more_options">Tap for more options</string>
